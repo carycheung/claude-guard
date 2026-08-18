@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFD98A"/>
+      <stop offset="1" stop-color="#F79B3E"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5B8DEF"/>
+      <stop offset="1" stop-color="#3A6BD8"/>
+    </linearGradient>
+    <clipPath id="squircle">
+      <path d="M512 64c317 0 448 131 448 448s-131 448-448 448S64 829 64 512 195 64 512 64z"/>
+    </clipPath>
+  </defs>
+
+  <!-- squircle background -->
+  <g clip-path="url(#squircle)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <circle cx="200" cy="180" r="260" fill="#FFFFFF" opacity="0.18"/>
+  </g>
+
+  <!-- ears -->
+  <ellipse cx="300" cy="360" rx="110" ry="150" fill="#B96A2B" transform="rotate(24 300 360)"/>
+  <ellipse cx="724" cy="360" rx="110" ry="150" fill="#B96A2B" transform="rotate(-24 724 360)"/>
+  <ellipse cx="312" cy="372" rx="70" ry="100" fill="#8A4A1B" transform="rotate(24 312 372)"/>
+  <ellipse cx="712" cy="372" rx="70" ry="100" fill="#8A4A1B" transform="rotate(-24 712 372)"/>
+
+  <!-- head -->
+  <circle cx="512" cy="490" r="270" fill="#E8933F"/>
+  <circle cx="512" cy="490" r="270" fill="none" stroke="#B96A2B" stroke-width="14"/>
+
+  <!-- face patches -->
+  <ellipse cx="512" cy="580" rx="150" ry="120" fill="#FFE9C7"/>
+
+  <!-- eyes -->
+  <circle cx="410" cy="450" r="38" fill="#3B2A1A"/>
+  <circle cx="614" cy="450" r="38" fill="#3B2A1A"/>
+  <circle cx="422" cy="438" r="12" fill="#FFFFFF"/>
+  <circle cx="626" cy="438" r="12" fill="#FFFFFF"/>
+
+  <!-- blush -->
+  <ellipse cx="340" cy="530" rx="34" ry="20" fill="#F2705B" opacity="0.55"/>
+  <ellipse cx="684" cy="530" rx="34" ry="20" fill="#F2705B" opacity="0.55"/>
+
+  <!-- nose & mouth -->
+  <ellipse cx="512" cy="540" rx="34" ry="26" fill="#3B2A1A"/>
+  <path d="M512 566 v30" stroke="#3B2A1A" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M452 600 q30 34 60 0" stroke="#3B2A1A" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M512 600 q30 34 60 0" stroke="#3B2A1A" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <!-- tongue -->
+  <path d="M540 622 q0 40 -28 40 q-28 0 -28 -40 q28 12 56 0z" fill="#F2705B"/>
+
+  <!-- security cap -->
+  <path d="M330 330 a 200 130 0 0 1 364 0 l 8 40 H 322 z" fill="#3A6BD8"/>
+  <path d="M330 330 a 200 130 0 0 1 364 0" fill="none" stroke="#2A50A8" stroke-width="12"/>
+  <rect x="300" y="360" width="424" height="34" rx="17" fill="#2A50A8"/>
+  <circle cx="512" cy="262" r="20" fill="#FFD34D"/>
+
+  <!-- shield -->
+  <g transform="translate(636 600)">
+    <path d="M110 0 C 160 26 200 30 220 30 C 220 150 190 220 110 260 C 30 220 0 150 0 30 C 20 30 60 26 110 0 z"
+          fill="url(#shield)" stroke="#FFFFFF" stroke-width="18"/>
+    <path d="M62 122 l 36 40 l 66 -78" fill="none" stroke="#FFFFFF" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

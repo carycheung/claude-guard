@@ -1,0 +1,21 @@
+# 编译产物 / 二进制（可从源码复现）
+ClaudeGuardBin
+*.o
+*.dSYM/
+
+# 运行时日志（含真实出口 IP，绝不入库）
+guard.log
+update.log
+
+# 大体积生成资源（由 icon.svg 生成，可复现）
+AppIcon.icns
+icon_1024.png
+icon.iconset/
+
+# macOS
+.DS_Store
+
+# 任何凭证 / 账号备份（安全兜底）
+*keychain*
+*creds*
+*_backup_*/
