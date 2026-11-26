@@ -20,7 +20,12 @@ is_shim() {
 }
 
 install_shim() {
-  if is_shim; then echo "✅ 替身已安装，无需重复"; exit 0; fi
+  local lsregister="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister"
+  if is_shim; then
+    "$lsregister" -f "$HIDDEN_PATH" 2>/dev/null || true
+    echo "✅ 替身已安装"
+    return
+  fi
   if [[ ! -d "$REAL_PATH" ]]; then echo "❌ 找不到 $REAL_PATH"; exit 1; fi
 
   echo "▶ 藏起真身 → $HIDDEN_PATH"
@@ -61,7 +66,8 @@ EOF
   chmod +x "$C/MacOS/ClaudeShim"
 
   # 刷新 Launch Services + 图标缓存
-  /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f "$REAL_PATH" 2>/dev/null || true
+  "$lsregister" -f "$HIDDEN_PATH" 2>/dev/null || true
+  "$lsregister" -f "$REAL_PATH" 2>/dev/null || true
   touch "$REAL_PATH"
   echo "✅ 替身已就位。以后点 Dock/启动台的 Claude = 先过守护检查再放行真身"
   echo "   真身: $HIDDEN_PATH"

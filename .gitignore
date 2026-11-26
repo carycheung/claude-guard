@@ -1,5 +1,6 @@
 # 编译产物 / 二进制（可从源码复现）
 ClaudeGuardBin
+ClaudeGuard.app/
 *.o
 *.dSYM/
 
